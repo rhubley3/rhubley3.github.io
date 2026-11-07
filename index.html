@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Name · Projects</title>
+  <meta name="description" content="A portfolio of passion projects.">
+  <style>
+    :root {
+      --bg: #fafaf7;
+      --surface: #ffffff;
+      --text: #1c1c1a;
+      --muted: #6b6b66;
+      --border: #e6e5df;
+      --accent: #2f6fed;
+      --radius: 14px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #121212;
+        --surface: #1c1c1c;
+        --text: #ededea;
+        --muted: #9a9a94;
+        --border: #2c2c2a;
+        --accent: #7aa5ff;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+
+    header { padding: 20px 0; }
+    nav { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-weight: 700; color: var(--text); }
+    nav ul { display: flex; gap: 20px; list-style: none; margin: 0; padding: 0; }
+    nav ul a { color: var(--muted); }
+
+    .hero { padding: 64px 0 48px; }
+    .hero h1 { font-size: clamp(2rem, 6vw, 3.2rem); line-height: 1.1; margin: 0 0 16px; }
+    .hero p { color: var(--muted); font-size: 1.15rem; max-width: 560px; margin: 0; }
+
+    h2 { font-size: 1.4rem; margin: 0 0 20px; }
+    section { padding: 32px 0; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+    a.card { color: inherit; text-decoration: none; }
+    .card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,.08); }
+    .thumb { aspect-ratio: 16 / 10; }
+    .t1 { background: linear-gradient(135deg, #ff9a8b, #ff6a88); }
+    .t2 { background: linear-gradient(135deg, #8ec5fc, #5b7fff); }
+    .t3 { background: linear-gradient(135deg, #a8e6cf, #3cb38a); }
+    .t4 { background: linear-gradient(135deg, #fddb92, #f5a742); }
+    .t5 { background: linear-gradient(135deg, #d4a5ff, #8a5cf6); }
+    .t6 { background: linear-gradient(135deg, #c9d6df, #52616b); }
+    .card-body { padding: 16px 18px 20px; flex: 1; display: flex; flex-direction: column; }
+    .card h3 { margin: 0 0 6px; font-size: 1.1rem; }
+    .card p { margin: 0 0 14px; color: var(--muted); font-size: .95rem; flex: 1; }
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+    .tag {
+      font-size: .75rem; padding: 2px 10px; border-radius: 999px;
+      border: 1px solid var(--border); color: var(--muted);
+    }
+
+    .about p { max-width: 640px; color: var(--muted); }
+    .links { display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn {
+      display: inline-block; padding: 10px 18px; border-radius: 999px;
+      border: 1px solid var(--border); background: var(--surface); color: var(--text);
+    }
+    .btn:hover { border-color: var(--accent); text-decoration: none; }
+
+    footer { padding: 40px 0; color: var(--muted); font-size: .9rem; border-top: 1px solid var(--border); margin-top: 32px; }
+
+    @media (max-width: 520px) {
+      nav ul { gap: 14px; font-size: .95rem; }
+      .hero { padding: 40px 0 32px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <nav>
+      <a class="logo" href="#">Your Name</a>
+      <ul>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <h1>Things I make for fun.</h1>
+      <p>A collection of side projects, experiments, and builds. Some finished, some still in progress.</p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="grid">
+        <a class="card" href="#">
+          <div class="thumb t1"></div>
+          <div class="card-body">
+            <h3>Project One</h3>
+            <p>A short sentence about what this is and why you made it.</p>
+            <div class="tags"><span class="tag">Hardware</span><span class="tag">2026</span></div>
+          </div>
+        </a>
+        <a class="card" href="#">
+          <div class="thumb t2"></div>
+          <div class="card-body">
+            <h3>Project Two</h3>
+            <p>Describe the idea, what you learned, or what's next for it.</p>
+            <div class="tags"><span class="tag">Code</span><span class="tag">In progress</span></div>
+          </div>
+        </a>
+        <a class="card" href="#">
+          <div class="thumb t3"></div>
+          <div class="card-body">
+            <h3>Project Three</h3>
+            <p>Swap the colored box for a photo or screenshot of the project.</p>
+            <div class="tags"><span class="tag">Design</span></div>
+          </div>
+        </a>
+        <a class="card" href="#">
+          <div class="thumb t4"></div>
+          <div class="card-body">
+            <h3>Project Four</h3>
+            <p>Each card can link to a GitHub repo, a video, or its own page.</p>
+            <div class="tags"><span class="tag">Woodworking</span></div>
+          </div>
+        </a>
+        <a class="card" href="#">
+          <div class="thumb t5"></div>
+          <div class="card-body">
+            <h3>Project Five</h3>
+            <p>Keep it to one or two lines so the grid stays tidy.</p>
+            <div class="tags"><span class="tag">Music</span></div>
+          </div>
+        </a>
+        <a class="card" href="#">
+          <div class="thumb t6"></div>
+          <div class="card-body">
+            <h3>Project Six</h3>
+            <p>Copy any card block in the HTML to add another project.</p>
+            <div class="tags"><span class="tag">Writing</span></div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <h2>About</h2>
+      <p>A couple of sentences about who you are and what you like to build. Mention what got you started, or what you're into right now.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="links">
+        <a class="btn" href="mailto:you@example.com">Email</a>
+        <a class="btn" href="https://github.com/">GitHub</a>
+        <a class="btn" href="#">Instagram</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">© 2026 Your Name</footer>
+</body>
+</html>
